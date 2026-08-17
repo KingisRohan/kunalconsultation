@@ -1,18 +1,533 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0E0E0E" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Sparta" />
-    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <title>Sparta Life</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Kunal Dhurve | Vastu Shastra Consultant in Andheri West, Mumbai</title>
+  <meta name="description" content="Kunal Dhurve is a Vastu Shastra consultant based in Andheri West, Mumbai. Residential, commercial and industrial vastu grounded in classical principles and practical application. Book a consultation.">
+  <meta name="keywords" content="vastu consultant, vastu shastra, vastu consultant Mumbai, vastu consultant Andheri West, residential vastu, commercial vastu, industrial vastu, property vastu, remote vastu consultation">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shree Kunal Dhurve | Vastu Shastra Consultant, Mumbai">
+  <meta property="og:description" content="Classical vastu shastra, applied to modern homes, offices and commercial properties across Mumbai and India.">
+  <meta property="og:locale" content="en_IN">
+
+  <link rel="canonical" href="https://shreekunalconsultancy.com/">
+
+  <link rel="icon" type="image/webp" href="assets/images/sri-yantra-logo.webp">
+  <link rel="icon" type="image/png" href="assets/images/sri-yantra-logo.png">
+  <link rel="apple-touch-icon" href="assets/images/sri-yantra-logo-1024.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,30..100&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://shreekunalconsultancy.com/#business",
+    "name": "Shree Kunal Dhurve",
+    "alternateName": "Kunal Dhurve Vastu Consultant",
+    "description": "Vastu Shastra consultant providing residential, commercial, and industrial consultations across Mumbai and India. Remote consultations available.",
+    "image": "https://shreekunalconsultancy.com/apple-touch-icon.svg",
+    "url": "https://shreekunalconsultancy.com",
+    "telephone": "+91-7777008369",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Andheri West",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400058",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Mumbai" },
+      { "@type": "City", "name": "Andheri West" },
+      { "@type": "City", "name": "Bandra" },
+      { "@type": "City", "name": "Juhu" },
+      { "@type": "City", "name": "Powai" },
+      { "@type": "City", "name": "Thane" },
+      { "@type": "Country", "name": "India" }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    "sameAs": []
+  }
+</script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <picture>
+            <source srcset="assets/images/sri-yantra-logo.webp" type="image/webp">
+            <img src="assets/images/sri-yantra-logo.png" alt="" width="32" height="32" class="brand__logo" loading="eager" decoding="async">
+       </picture>
+     </span>
+        <span class="brand__name">
+          Shree Kunal Dhurve
+          <small>Vastu Shastra Consultant</small>
+     </span>
+   </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20vastu%20consultation." class="nav__cta" target="_blank" rel="noopener">Book Consultation</a>
+   </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="3" y1="6" x2="17" y2="6"/>
+          <line x1="3" y1="10" x2="17" y2="10"/>
+          <line x1="3" y1="14" x2="17" y2="14"/>
+     </svg>
+   </button>
+ </div>
+</header>
+
+  <main>
+
+    <section class="hero">
+      <div class="grid-lines" aria-hidden="true"/div>
+
+      <div class="compass-wrap" aria-hidden="true">
+        <svg class="compass-mark" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.6">
+          <circle cx="100" cy="100" r="95"/>
+          <circle cx="100" cy="100" r="78" stroke-opacity="0.5"/>
+          <circle cx="100" cy="100" r="55" stroke-opacity="0.3"/>
+          <line x1="100" y1="5" x2="100" y2="195" stroke-opacity="0.4"/>
+          <line x1="5" y1="100" x2="195" y2="100" stroke-opacity="0.4"/>
+          <line x1="25" y1="25" x2="175" y2="175" stroke-opacity="0.25"/>
+          <line x1="25" y1="175" x2="175" y2="25" stroke-opacity="0.25"/>
+          <text x="100" y="22" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="currentColor" stroke="none">N</text>
+          <text x="100" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="currentColor" stroke="none">S</text>
+          <text x="178" y="104" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="currentColor" stroke="none">E</text>
+          <text x="22" y="104" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="currentColor" stroke="none">W</text>
+     </svg>
+   </div>
+
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Andheri West &middot; Mumbai &middot; Remote across India</span>
+          <h1>Spaces designed to <em>work for you</em></h1>
+          <p class="lede hero__lede">Kunal Dhurve, Vastu Shastra Consultant. Residential, commercial and industrial vastu grounded in classical principles and practical application</p>
+
+          <div class="hero__ctas">
+            <a href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20vastu%20consultation." target="_blank" rel="noopener" class="btn btn--primary">
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.6 2.3A7.4 7.4 0 0 0 8 .8a7.4 7.4 0 0 0-6.3 11.2L.8 15.2l3.3-.9A7.4 7.4 0 0 0 8 15.3a7.4 7.4 0 0 0 5.6-12.9zm-2 8.4c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.2-3-.6-2.5-1-4.1-3.5-4.2-3.7-.1-.2-1-1.4-1-2.6s.7-1.9 1-2.1c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.4-.5.6c-.2.2-.3.4-.1.7.2.4.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.8-1c.2-.3.5-.2.8-.1l2 1c.3.1.4.2.5.4 0 .1 0 .8-.2 1.5z</path></svg>
+              Book a Consultation
+         </a>
+            <a href="tel:+917777008369" class="btn btn--ghost">
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 11.7v1.7a1 1 0 0 1-1.1 1 9.5 9.5 0 0 1-4.1-1.4 9.3 9.3 0 0 1-2.9-2.9A9.5 9.5 0 0 1 4.5 6a1 1 0 0 1 1-1.1h1.7a1 1 0 0 1 1 .9c0 .5.1 1 .2 1.4a1 1 0 0 1-.2 1l-.7.7a7.5 7.5 0 0 0 2.9 2.9l.7-.7a1 1 0 0 1 1-.2c.5.1 1 .2 1.4.2a1 1 0 0 1 .9 1z</path></svg>
+              Call Now
+         </a>
+       </div>
+
+          <div class="hero__meta">
+            <div><strong>Based in</strong>Andheri West, Mumbai</div>
+            <div><strong>Service area</strong>Mumbai &middot; across India</div>
+            <div><strong>Consultations</strong>Residential &middot; Commercial &middot; Industrial</div>
+       </div>
+     </div>
+
+        <div class="hero__portrait">
+          <div class="portrait portrait--logo" aria-label="Shree Kunal Dhurve emblem">
+            <picture>
+              <source srcset="assets/images/sri-yantra-logo.webp" type="image/webp">
+              <img src="assets/images/sri-yantra-logo.png" alt="Shree Kunal Dhurve emblem" width="500" height="500" class="portrait__img" loading="eager" decoding="async">
+          </picture>
+            <div class="portrait__label">Shree Kunal Dhurve</div>
+        </div>
+      </div>
+   </div>
+ </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="intro-block">
+          <aside class="intro-block__rail">
+            <div class="intro-block__num">01</div>
+            <div class="intro-block__label">The discipline</div>
+            <ul class="intro-block__list">
+              <li>Classical texts</li>
+              <li>Orientation &middot; Layout</li>
+              <li>Energy &middot; Function</li>
+              <li>Modern application</li>
+         </ul>
+       </aside>
+          <div class="intro-block__content">
+            <span class="eyebrow">What is Vastu Shastra</span>
+            <h2>An ancient science of <em>orientation, layout,</em> and energy flow - applied to the spaces you live and work in</h2>
+            <p class="lede">Vastu Shastra is the classical Indian discipline of architecture and placement. It studies how the orientation of a building, the position of rooms, and the movement of light and air affect the way a space supports the people in it. Kunal applies it to modern flats, offices, shops, factories and plots - without mysticism, with practical recommendations you can act on</p>
+       </div>
+     </div>
+   </div>
+ </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>Practical vastu for every kind of space</h2>
+          <p>Each engagement is independent - scoped to the property, your goals, and what actually needs to change</p>
+     </div>
+
+        <div class="services">
+
+          <article class="service">
+            <span class="service__index">01 / Residential</span>
+            <h3>Residential Vastu</h3>
+            <p>Flats, bungalows, villas and independent houses - existing or under construction</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              On-site assessment with compass readings, prioritised recommendations, and a written report.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Residential%20Vastu%20consultation." target="_blank" rel="noopener">
+              Enquire about Residential Vastu
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+          <article class="service">
+            <span class="service__index">02 / Commercial</span>
+            <h3>Commercial Vastu</h3>
+            <p>Offices, retail shops, showrooms, clinics, restaurants and hospitality spaces</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              Layout analysis, desk and entrance corrections, and remedies that respect the working environment.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Commercial%20Vastu%20consultation." target="_blank" rel="noopener">
+              Enquire about Commercial Vastu
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+          <article class="service">
+            <span class="service__index">03 / Industrial</span>
+            <h3>Industrial Vastu</h3>
+            <p>Factories, warehouses, production floors and logistics facilities across scales</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              Plot and machine orientation review, workflow-aligned recommendations, written summary.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Industrial%20Vastu%20consultation." target="_blank" rel="noopener">
+              Enquire about Industrial Vastu
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+          <article class="service">
+            <span class="service__index">04 / Property Selection</span>
+            <h3>New Property Selection</h3>
+            <p>Vastu evaluation before you commit to a purchase - the most cost-effective stage to consult</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              Floor plan and plot analysis, a clear pass / proceed-with-changes / avoid verdict.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Property%20Selection%20vastu." target="_blank" rel="noopener">
+              Enquire about Property Selection
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+          <article class="service">
+            <span class="service__index">05 / Plot & Construction</span>
+            <h3>Plot and Construction Vastu</h3>
+            <p>Layout planning at the design stage - before excavation, before pouring, before mistakes lock in</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              Review of architectural plans with marked corrections and on-site visits during key stages.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Plot%20and%20Construction%20Vastu." target="_blank" rel="noopener">
+              Enquire about Plot & Construction
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+          <article class="service">
+            <span class="service__index">06 / Remote</span>
+            <h3>Remote Consultation</h3>
+            <p>For clients outside Mumbai - floor plan analysis over a call, with written recommendations</p>
+            <div class="service__deliver">
+              <strong>You receive</strong>
+              Video or phone consultation, detailed PDF report, follow-up clarification within seven days.
+         </div>
+            <a class="service__cta" href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20Remote%20Vastu%20consultation." target="_blank" rel="noopener">
+              Enquire about Remote Consultation
+              <span aria-hidden="true">&rarr</span>
+         </a>
+       </article>
+
+     </div>
+   </div>
+ </section>
+
+    <section class="section section--alt" id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">My approach</span>
+          <h2>A clear four-step method, not a ritual</h2>
+          <p>You always know what stage you are at, what I am doing, and what you will receive at the end</p>
+     </div>
+
+        <ol class="approach">
+          <li class="step">
+            <div class="step__num">01</div>
+            <h4>Understanding</h4>
+            <p>A short conversation about the property, your goals, and any concerns. We agree on scope before I visit</p>
+       </li>
+          <li class="step">
+            <div class="step__num">02</div>
+            <h4>Assessment</h4>
+            <p>On-site or floor-plan review with accurate compass readings and measurement of the key zones</p>
+       </li>
+          <li class="step">
+            <div class="step__num">03</div>
+            <h4>Analysis</h4>
+            <p>Detailed study against classical principles, cross-checked against practical use of the space</p>
+       </li>
+          <li class="step">
+            <div class="step__num">04</div>
+            <h4>Recommendations</h4>
+            <p>A prioritised list of changes and remedies, in plain language, with a follow-up included</p>
+       </li>
+     </ol>
+   </div>
+ </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Why Kunal</span>
+          <h2>Plain answers, honest limits, no demolition by default</h2>
+     </div>
+
+        <div class="trust">
+          <div class="trust__item">
+            <h4>Classical grounding</h4>
+            <p>Years of study of vastu shastra texts, applied through a structured assessment process rather than ad-hoc rules</p>
+       </div>
+          <div class="trust__item">
+            <h4>No-demolition-first</h4>
+            <p>Recommendations begin with layout, placement and usage changes. Structural changes are suggested only when they meaningfully help</p>
+       </div>
+          <div class="trust__item">
+            <h4>Clear written reports</h4>
+            <p>You receive a written summary after every consultation - what was checked, what was found, what to do next</p>
+       </div>
+          <div class="trust__item">
+            <h4>Honest assessment</h4>
+            <p>If your space already works well, I will tell you. I tell clients when changes are not needed as readily as when they are</p>
+       </div>
+     </div>
+   </div>
+ </section>
+
+    <section class="section section--alt" id="testimonials">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Client notes</span>
+          <h2>What clients say after the work is done</h2>
+          <p>Verified notes from recent consultations - shared with permission</p>
+     </div>
+
+        <div class="testimonials">
+          <figure class="testimonial">
+            <blockquote>We were about to close on a flat in Andheri and the broker pushed hard. Kunal reviewed the plan on a call the same day and flagged two real issues we would have lived with for years. We walked away. Saved us a lot of headache</blockquote>
+            <figcaption class="testimonial__cite"><strong>Rakesh</strong>, Andheri West &middot; 3BHK flat purchase</figcaption>
+       </figure>
+
+          <figure class="testimonial">
+            <blockquote>Our new factory was producing well but staff felt uneasy in the south corner. Kunal came on site, walked every line, sent a written report within a week. Small moves, no breaking walls, the corner now feels like part of the workspace</blockquote>
+            <figcaption class="testimonial__cite"><strong>Imran</strong>, MIDC Andheri &middot; manufacturing unit</figcaption>
+       </figure>
+
+          <figure class="testimonial">
+            <blockquote>I have consulted him for both our clinic and our home. What I appreciate is the honesty - when nothing needs to change, he says so. He also tells you when the original architect had it right. Rare in this field</blockquote>
+            <figcaption class="testimonial__cite"><strong>Dr. Neha</strong>, Bandra &middot; clinic and residence</figcaption>
+       </figure>
+     </div>
+
+        <p class="muted" style="margin-top: 1.5rem; font-size: 0.88rem; text-align: center;">More client notes are added as permissions come in</p>
+   </div>
+ </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Common questions</span>
+          <h2>Six things most clients ask first</h2>
+     </div>
+
+        <div class="faq">
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>Do I need to demolish anything?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Rarely. Most recommendations are about placement, usage and small adjustments. Structural changes are suggested only when they would meaningfully improve how the space works</p</div>
+       </div>
+       </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>Can vastu be done for a rented flat?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Yes. The focus shifts to placement of furniture, sleeping direction, work desk, kitchen use and colour - changes within your control as a tenant</p</div>
+       </div>
+       </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>Do you consult on floor plans before purchase?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Yes - and it is the most cost-effective stage to consult. You get a clear assessment before committing your money</p</div>
+       </div>
+       </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>How long does a consultation take?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Typically 90 minutes to three hours on site, depending on property size and scope. Remote consultations run about 60 minutes over a call</p</div>
+       </div>
+       </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>Do you offer remote consultations?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Yes, for clients anywhere in India. You share the floor plan, we speak by video or phone, and you receive a written report by email</p</div>
+       </div>
+       </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false" type="button">
+              <span>Is vastu religious?</span>
+              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12</line</svg>
+         </button>
+            <div class="faq__answer" hidden>
+              <div><p>Vastu is a classical architectural science, not a religious practice. It is followed by people of all backgrounds and is applied in commercial, residential and industrial contexts alike</p</div>
+       </div>
+       </div>
+     </div>
+
+        <p style="margin-top: 2rem;"><a href="faq.html" class="service__cta">See all frequently asked questions <span aria-hidden="true">&rarr</span</a></p>
+   </div>
+ </section>
+
+    <section class="cta-strip">
+      <div class="wrap cta-strip__inner">
+        <div>
+          <h2>Ready to talk about your <em>space</em>?</h2>
+          <p class="cta-strip__sub">A short call is the fastest way to know whether a consultation is the right next step</p>
+     </div>
+        <div class="cta-strip__actions">
+          <a href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20vastu%20consultation." target="_blank" rel="noopener" class="btn btn--primary">WhatsApp</a>
+          <a href="tel:+917777008369" class="btn btn--ghost">Call +91 77770 08369</a>
+     </div>
+   </div>
+ </section>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--footer">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" width="28" height="28">
+                <circle cx="32" cy="32" r="28"/>
+                <polygon points="32,8 36,32 32,56 28,32" fill="#8B4A2B" stroke="none"/>
+                <circle cx="32" cy="32" r="2" fill="#5C2E18" stroke="none"/>
+         </svg>
+       </span>
+            <span class="brand__name">Shree Kunal Dhurve<small>Vastu Shastra Consultant</small></span>
+       </a>
+          <p class="footer__credibility">Classical vastu shastra, applied with the discipline of a working consultant</p>
+          <p class="footer__contact">Andheri West, Mumbai, Maharashtra 400058<br>+91 77770 08369</p>
+     </div>
+
+        <div class="footer__col">
+          <h5>Site</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+     </ul>
+   </div>
+
+        <div class="footer__col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html#services">Residential Vastu</a></li>
+            <li><a href="services.html#services">Commercial Vastu</a></li>
+            <li><a href="services.html#services">Industrial Vastu</a></li>
+            <li><a href="services.html#services">Property Selection</a></li>
+            <li><a href="services.html#services">Plot & Construction</a></li>
+            <li><a href="services.html#services">Remote Consultation</a></li>
+     </ul>
+   </div>
+
+        <div class="footer__col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+917777008369">Call +91 77770 08369</a></li>
+            <li><a href="https://wa.me/917777008369" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:hello@shreekunalconsultancy.com">Email</a></li>
+     </ul>
+   </div>
+ </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Shree Kunal Dhurve All rights reserved</span>
+        <span>Mumbai &middot; India</span>
+ </div>
+</div>
+</footer>
+
+  <div class="sticky-bar" role="region" aria-label="Quick contact">
+    <a href="tel:+917777008369" class="btn btn--ghost">
+      <svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 11.7v1.7a1 1 0 0 1-1.1 1 9.5 9.5 0 0 1-4.1-1.4 9.3 9.3 0 0 1-2.9-2.9A9.5 9.5 0 0 1 4.5 6a1 1 0 0 1 1-1.1h1.7a1 1 0 0 1 1 .9c0 .5.1 1 .2 1.4a1 1 0 0 1-.2 1l-.7.7a7.5 7.5 0 0 0 2.9 2.9l.7-.7a1 1 0 0 1 1-.2c.5.1 1 .2 1.4.2a1 1 0 0 1 .9 1z</path></svg>
+      Call
+ </a>
+    <a href="https://wa.me/917777008369?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20vastu%20consultation." target="_blank" rel="noopener" class="btn btn--primary">
+      <svg class="btn__icon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.6 2.3A7.4 7.4 0 0 0 8 .8a7.4 7.4 0 0 0-6.3 11.2L.8 15.2l3.3-.9A7.4 7.4 0 0 0 8 15.3a7.4 7.4 0 0 0 5.6-12.9zm-2 8.4c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.2-3-.6-2.5-1-4.1-3.5-4.2-3.7-.1-.2-1-1.4-1-2.6s.7-1.9 1-2.1c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.4-.5.6c-.2.2-.3.4-.1.7.2.4.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.8-1c.2-.3.5-.2.8-.1l2 1c.3.1.4.2.5.4 0 .1 0 .8-.2 1.5z</path></svg>
+      WhatsApp
+ </a>
+</div>
+
+  <script>
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+</script>
+  <script src="js/main.js</script>
+</body>
 </html>

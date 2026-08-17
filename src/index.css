@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+/* Brand tokens. Colors and families are locked, see /CLAUDE.md. */
+@theme {
+  --color-ink: #0e0e0e;
+  --color-paper: #f4f1ec;
+  --color-crimson: #8b1a1a;
+  --color-gold: #b8924a;
+  --color-muted: #6b6b6b;
+
+  --font-headline: 'League Spartan', ui-sans-serif, sans-serif;
+  --font-editorial: 'Playfair Display', ui-serif, serif;
+  --font-body: 'Inter', ui-sans-serif, sans-serif;
+}
+
+/* League Spartan ships as Bold only. Headlines are always bold, per the brand system. */
+@utility font-headline {
+  font-family: var(--font-headline);
+  font-weight: 700;
+}
+
+html {
+  background-color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep primary actions inside the mobile safe zone on notched devices. */
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 1.25rem);
+}
+
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}

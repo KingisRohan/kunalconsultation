@@ -225,12 +225,20 @@ p{margin:0 0 var(--space-2)}
   display:flex;flex-direction:column;
   transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease),transform var(--dur) var(--ease);
 }
-.service::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--metal);opacity:.85}
+.service::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--metal);opacity:.85;z-index:2}
 .service::after{
   content:"";position:absolute;top:9px;left:9px;width:18px;height:18px;
-  background:var(--corner) no-repeat center/contain;opacity:.5;pointer-events:none;
+  background:var(--corner) no-repeat center/contain;opacity:.5;pointer-events:none;z-index:3;
 }
 .service:hover{border-color:var(--line);box-shadow:var(--glow);transform:translateY(-3px)}
+.service__photo{
+  position:relative;z-index:1;overflow:hidden;
+  margin:calc(var(--space-4) * -1) calc(var(--space-4) * -1) var(--space-3);
+}
+.service__photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 900ms var(--ease)}
+.service:hover .service__photo img{transform:scale(1.045)}
+.service__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,14,0) 55%,var(--ink2) 100%)}
+.section--light .service__photo::after{background:linear-gradient(180deg,rgba(20,16,14,0) 55%,var(--cream-card) 100%)}
 .service__seat{
   font-family:"Karla",sans-serif;font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--tx-faint);font-weight:700;margin-bottom:var(--space-3);padding-left:1.9rem;
@@ -262,6 +270,9 @@ p{margin:0 0 var(--space-2)}
 .dik{background:var(--ink2);padding:var(--space-3) var(--space-3) var(--space-4);min-height:150px;
   transition:background var(--dur) var(--ease)}
 .dik:hover{background:var(--ink3)}
+.dik__icon{width:24px;height:24px;color:var(--gold);opacity:.85;margin-bottom:.6rem}
+.dik--centre .dik__icon{color:var(--gold-lit);opacity:1}
+.section--light .dik__icon{color:var(--gold-ink)}
 .dik__dir{font-family:"Karla",sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tx-faint);font-weight:700;margin-bottom:.5rem}
 .dik__lord{font-family:"Noto Serif Devanagari",serif;font-size:1.22rem;color:var(--gold-lit);margin-bottom:.1rem;font-weight:500}
 .dik__name{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05rem;color:var(--gold);font-style:italic;margin-bottom:.45rem}
@@ -290,6 +301,21 @@ p{margin:0 0 var(--space-2)}
 .offer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--metal);opacity:.8}
 .offer h3{color:var(--gold-lit);margin-bottom:.4rem;font-weight:700}
 .offer p{color:var(--tx-muted);margin:0}
+.offer__traits{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);margin-top:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--line-soft)}
+.offer__trait{display:flex;align-items:flex-start;gap:.55rem}
+.offer__trait svg{width:19px;height:19px;flex-shrink:0;color:var(--gold);margin-top:.15rem}
+.offer__trait span{font-family:"Karla",sans-serif;font-size:.76rem;color:var(--tx-muted);letter-spacing:.01em;line-height:1.4}
+.section--light .offer__traits{border-top-color:var(--line-ink-soft)}
+.section--light .offer__trait svg{color:var(--gold-ink)}
+.section--light .offer__trait span{color:var(--tx-light-2)}
+
+/* Pull-quote -----------------------------------------------------------------*/
+.quote-panel{border-left:2px solid var(--gold);padding-left:var(--space-3);margin:var(--space-4) 0 var(--space-3)}
+.quote-panel p{font-family:"Cormorant Garamond","Noto Serif Devanagari",Georgia,serif;font-style:italic;font-weight:600;font-size:var(--step-2);color:var(--gold-lit);line-height:1.38;margin:0 0 .5rem}
+.quote-panel cite{display:block;font-family:"Karla",sans-serif;font-size:.7rem;font-style:normal;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tx-faint)}
+.section--light .quote-panel{border-left-color:var(--gold-ink)}
+.section--light .quote-panel p{color:var(--gold-ink-d)}
+.section--light .quote-panel cite{color:var(--tx-light-2)}
 
 /* CTA strip -----------------------------------------------------------------*/
 .cta-strip{background:var(--maroon-band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -322,13 +348,19 @@ p{margin:0 0 var(--space-2)}
 .form{display:grid;gap:var(--space-3)}
 .form__field{display:grid;gap:.4rem}
 .form__field label{font-family:"Karla",sans-serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-faint);font-weight:700}
-.form__field input,.form__field textarea{
+.form__field input,.form__field textarea,.form__field select{
   background:var(--ink);border:1px solid var(--line-soft);padding:.9rem 1rem;font:inherit;color:var(--tx);width:100%;
   transition:border-color var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease);
+  border-radius:var(--r-none);
 }
 .form__field input::placeholder,.form__field textarea::placeholder{color:var(--tx-faint);opacity:1}
-.form__field input:focus,.form__field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,146,47,.14)}
+.form__field input:focus,.form__field textarea:focus,.form__field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,146,47,.14)}
 .form__field textarea{resize:vertical;min-height:130px}
+.form__field select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23C9922F' stroke-width='1.6'%3E%3Cpath d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:14px;padding-right:2.6rem;
+}
+.form__field select:invalid{color:var(--tx-faint)}
 .form__note{font-size:.82rem;color:var(--tx-faint);margin:0}
 .form__status{font-size:.88rem;padding:.7rem .9rem;display:none;border:1px solid var(--line-soft)}
 .form__status--ok{display:block;color:var(--gold-lit);border-color:var(--gold)}
@@ -496,6 +528,14 @@ body.nav-open{overflow:hidden}
   border:1px dashed var(--line-soft);padding:var(--space-3);color:var(--tx-faint);
   font-size:.88rem;font-style:italic;margin-top:auto;
 }
+.voice__quote{
+  font-family:"Cormorant Garamond","Noto Serif Devanagari",Georgia,serif;font-style:italic;font-weight:600;
+  color:var(--tx);font-size:1.06rem;line-height:1.56;flex:1;
+}
+.voice__cite{
+  font-family:"Karla",sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-soft);margin-top:auto;padding-top:var(--space-2);border-top:1px solid var(--line-soft);
+}
 
 /* Grid children must be allowed to shrink below their content width ------------ */
 .contact > *, .contact-split > *, .services > *, .mandala-grid > *, .offering > *, .voices > * { min-width: 0; }
@@ -609,11 +649,15 @@ body.nav-open{overflow:hidden}
 .section--light .contact__row a{ border-bottom-color:var(--line-ink-soft); }
 .section--light .contact__row a:hover{ color:var(--gold-ink-d);border-bottom-color:var(--gold-ink); }
 .section--light .form__field label{ color:var(--tx-light-2); }
-.section--light .form__field input,.section--light .form__field textarea{
+.section--light .form__field input,.section--light .form__field textarea,.section--light .form__field select{
   background:#FFFDF7;border-color:var(--line-ink-soft);color:var(--tx-light);
 }
+.section--light .form__field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%238A5F17' stroke-width='1.6'%3E%3Cpath d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:14px;
+}
 .section--light .form__field input::placeholder,.section--light .form__field textarea::placeholder{ color:#8A7A62; }
-.section--light .form__field input:focus,.section--light .form__field textarea:focus{
+.section--light .form__field input:focus,.section--light .form__field textarea:focus,.section--light .form__field select:focus{
   border-color:var(--gold-ink);box-shadow:0 0 0 3px rgba(138,95,23,.16);
 }
 .section--light .form__note{ color:var(--tx-light-2); }

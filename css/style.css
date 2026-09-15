@@ -267,7 +267,11 @@ p { margin: 0 0 var(--space-2); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-2); gap: var(--space-3); }
 
 .brand { display: inline-flex; align-items: center; gap: 0.9rem; }
-.brand__mark { width: 62px; height: 62px; flex-shrink: 0; color: var(--gold); filter: drop-shadow(0 0 14px rgba(201,146,47,.4)); }
+.brand__mark {
+  width: 62px; height: 62px; flex-shrink: 0; border-radius: 50%; overflow: hidden;
+  color: var(--gold); filter: drop-shadow(0 0 14px rgba(201,146,47,.4));
+}
+.brand__mark img { width: 100%; height: 100%; object-fit: cover; }
 .brand__name {
   font-family: var(--font-title);
   line-height: 1.1;

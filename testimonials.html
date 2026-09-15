@@ -3,24 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="eTcAwBEXMHzzOtmj7loL_bXhq1aPAVMnPyKlKAntVkM" />
-  <title>Families | Guruji Shree Kunal Acharya</title>
-  <meta name="description" content="Words from families and clients guided by Guruji Shree Kunal Acharya — residential, commercial, plot and property-selection Vāstu across India and abroad.">
+  <title>Client Notes | Shree Kunal Acharya Vastu Consultant</title>
+  <meta name="description" content="Client testimonials for Guruji Shree Kunal Acharya, Vastu Shastra consultant in Andheri West, Mumbai, published with written client consent.">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Shree Kunal Acharya">
-  <meta property="og:title" content="Families | Guruji Shree Kunal Acharya">
-  <meta property="og:description" content="Words from families and clients guided by Guruji Shree Kunal Acharya — residential, commercial, plot and property-selection Vāstu across India and abroad.">
+  <meta property="og:title" content="Client Notes | Shree Kunal Acharya Vastu Consultant">
+  <meta property="og:description" content="Guidance, in the words of the clients it was given to. Every quote published with written permission.">
+
+  <style>
+    /* Testimonial cards: page-scoped extension of the Rev D system ------------ */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+    .testimonial-card {
+      display: flex; flex-direction: column; gap: var(--space-2);
+      padding: var(--space-4); border: 1px solid var(--line-light);
+      background: rgba(255,252,245,.7);
+      transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+    }
+    .testimonial-card:hover { border-color: var(--gold); box-shadow: 0 18px 40px -26px rgba(90,60,10,.5); }
+    .testimonial-card__category {
+      font-family: var(--font-ui); font-size: 0.64rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--brass);
+    }
+    .testimonial-card__quote {
+      font-family: var(--font-display); font-style: italic; font-size: 1.02rem;
+      line-height: 1.55; color: var(--tx-light); flex: 1; margin: 0;
+    }
+    .testimonial-card__author {
+      font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600;
+      color: var(--tx-light); margin: 0; padding-top: var(--space-2);
+      border-top: 1px solid var(--line-light);
+    }
+    .testimonial-card__author span { display: block; font-weight: 400; color: var(--tx-light-muted); margin-top: 0.15rem; }
+    @media (max-width: 980px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  </style>
   <meta property="og:url" content="https://shreekunalconsultancy.com/testimonials.html">
+  <meta property="og:image" content="https://shreekunalconsultancy.com/assets/images/hero-vedic-altar.jpg">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="908">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:image" content="https://shreekunalconsultancy.com/assets/images/og-share.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="A lit brass diya on a wooden ledge">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Families | Guruji Shree Kunal Acharya">
-  <meta name="twitter:description" content="Words from families and clients guided by Guruji Shree Kunal Acharya — residential, commercial, plot and property-selection Vāstu across India and abroad.">
-  <meta name="twitter:image" content="https://shreekunalconsultancy.com/assets/images/og-share.jpg">
 
   <link rel="canonical" href="https://shreekunalconsultancy.com/testimonials.html">
 
@@ -30,181 +52,284 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Karla:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Marcellus&family=Karla:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Sacred top bar ------------------------------------------------------ -->
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="topbar__meta">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Andheri West, Mumbai
+        </span>
+      </div>
+
+      <p class="topbar__shloka" lang="sa" title="Rig Veda 7.54.1: O Lord, know us and be gracious to us.">॥ वास्तोष्पते प्रति जानीह्यस्मान् ॥</p>
+
+      <div class="topbar__meta">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg>
+          Remote consultations across India
+        </span>
+        <a href="contact.html" aria-label="Contact us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header --------------------------------------------------------------- -->
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="brand" href="index.html">
-        <svg class="brand__mark" aria-hidden="true" focusable="false" viewBox="0 0 1000 1000" vector-effect="non-scaling-stroke" xmlns="http://www.w3.org/2000/svg"> <g id="circles"> <circle cx="500.00" cy="500.00" r="388" fill="none" stroke="currentColor" stroke-width="2"/> <circle cx="500.00" cy="500.00" r="402" fill="none" stroke="currentColor" stroke-width="2"/> <circle cx="500.00" cy="500.00" r="416" fill="none" stroke="currentColor" stroke-width="2"/> </g> <g id="lotus16"> <path d="M 453.50,173.29 Q 457.54,148.35 500.00,126.00 Q 542.46,148.35 546.50,173.29 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 582.07,180.37 Q 595.34,158.87 643.12,154.47 Q 673.80,191.37 667.98,215.96 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 698.14,236.10 Q 718.63,221.32 764.46,235.54 Q 778.68,281.37 763.90,301.86 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 784.04,332.02 Q 808.63,326.20 845.53,356.88 Q 841.13,404.66 819.63,417.93 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 826.71,453.50 Q 851.65,457.54 874.00,500.00 Q 851.65,542.46 826.71,546.50 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 819.63,582.07 Q 841.13,595.34 845.53,643.12 Q 808.63,673.80 784.04,667.98 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 763.90,698.14 Q 778.68,718.63 764.46,764.46 Q 718.63,778.68 698.14,763.90 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 667.98,784.04 Q 673.80,808.63 643.12,845.53 Q 595.34,841.13 582.07,819.63 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 546.50,826.71 Q 542.46,851.65 500.00,874.00 Q 457.54,851.65 453.50,826.71 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 417.93,819.63 Q 404.66,841.13 356.88,845.53 Q 326.20,808.63 332.02,784.04 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 301.86,763.90 Q 281.37,778.68 235.54,764.46 Q 221.32,718.63 236.10,698.14 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 215.96,667.98 Q 191.37,673.80 154.47,643.12 Q 158.87,595.34 180.37,582.07 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 173.29,546.50 Q 148.35,542.46 126.00,500.00 Q 148.35,457.54 173.29,453.50 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 180.37,417.93 Q 158.87,404.66 154.47,356.88 Q 191.37,326.20 215.96,332.02 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 236.10,301.86 Q 221.32,281.37 235.54,235.54 Q 281.37,221.32 301.86,236.10 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 332.02,215.96 Q 326.20,191.37 356.88,154.47 Q 404.66,158.87 417.93,180.37 Z" fill="none" stroke="currentColor" stroke-width="2"/> </g> <g id="lotus8"> <path d="M 424.67,240.72 Q 429.19,211.05 500.00,180.00 Q 570.81,211.05 575.33,240.72 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 630.07,263.40 Q 654.25,245.61 726.27,273.73 Q 754.39,345.75 736.60,369.93 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 759.28,424.67 Q 788.95,429.19 820.00,500.00 Q 788.95,570.81 759.28,575.33 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 736.60,630.07 Q 754.39,654.25 726.27,726.27 Q 654.25,754.39 630.07,736.60 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 575.33,759.28 Q 570.81,788.95 500.00,820.00 Q 429.19,788.95 424.67,759.28 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 369.93,736.60 Q 345.75,754.39 273.73,726.27 Q 245.61,654.25 263.40,630.07 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 240.72,575.33 Q 211.05,570.81 180.00,500.00 Q 211.05,429.19 240.72,424.67 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 263.40,369.93 Q 245.61,345.75 273.73,273.73 Q 345.75,245.61 369.93,263.40 Z" fill="none" stroke="currentColor" stroke-width="2"/> </g> <g id="bhupura"> <path d="M 70.00,70.00 L 468.00,70.00 L 468.00,42.00 L 532.00,42.00 L 532.00,70.00 L 930.00,70.00 L 930.00,70.00 L 930.00,468.00 L 958.00,468.00 L 958.00,532.00 L 930.00,532.00 L 930.00,930.00 L 930.00,930.00 L 532.00,930.00 L 532.00,958.00 L 468.00,958.00 L 468.00,930.00 L 70.00,930.00 L 70.00,930.00 L 70.00,532.00 L 42.00,532.00 L 42.00,468.00 L 70.00,468.00 L 70.00,70.00 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 53.00,53.00 L 468.00,53.00 L 468.00,25.00 L 532.00,25.00 L 532.00,53.00 L 947.00,53.00 L 947.00,53.00 L 947.00,468.00 L 975.00,468.00 L 975.00,532.00 L 947.00,532.00 L 947.00,947.00 L 947.00,947.00 L 532.00,947.00 L 532.00,975.00 L 468.00,975.00 L 468.00,947.00 L 53.00,947.00 L 53.00,947.00 L 53.00,532.00 L 25.00,532.00 L 25.00,468.00 L 53.00,468.00 L 53.00,53.00 Z" fill="none" stroke="currentColor" stroke-width="2"/> <path d="M 36.00,36.00 L 468.00,36.00 L 468.00,8.00 L 532.00,8.00 L 532.00,36.00 L 964.00,36.00 L 964.00,36.00 L 964.00,468.00 L 992.00,468.00 L 992.00,532.00 L 964.00,532.00 L 964.00,964.00 L 964.00,964.00 L 532.00,964.00 L 532.00,992.00 L 468.00,992.00 L 468.00,964.00 L 36.00,964.00 L 36.00,964.00 L 36.00,532.00 L 8.00,532.00 L 8.00,468.00 L 36.00,468.00 L 36.00,36.00 Z" fill="none" stroke="currentColor" stroke-width="2"/> </g> <g id="triangles"> <polygon points="500.00,523.11 366.22,286.60 633.78,286.60" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,673.33 336.58,355.86 663.42,355.86" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,760.00 256.99,407.56 743.01,407.56" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,624.16 412.84,447.89 587.16,447.89" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,552.00 445.82,473.05 554.18,473.05" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,355.86 422.67,523.11 577.33,523.11" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,240.00 245.25,552.00 754.75,552.00" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,286.60 317.59,624.16 682.41,624.16" fill="none" stroke="currentColor" stroke-width="2"/> <polygon points="500.00,407.56 385.08,673.33 614.92,673.33" fill="none" stroke="currentColor" stroke-width="2"/> </g> <g id="bindu"> <circle cx="500.00" cy="500.00" r="6" fill="currentColor" stroke="none"/> </g> </svg>
-        <span class="brand__name">Shree Kunal Acharya<small>Vāstu Śāstra</small></span>
+      <a href="index.html" class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 1000 1000" width="62" height="62" xmlns="http://www.w3.org/2000/svg">
+            <g id="triangles">
+              <polygon points="500.00,523.11 366.22,286.60 633.78,286.60" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,673.33 336.58,355.86 663.42,355.86" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,760.00 256.99,407.56 743.01,407.56" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,624.16 412.84,447.89 587.16,447.89" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,552.00 445.82,473.05 554.18,473.05" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,355.86 422.67,523.11 577.33,523.11" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,240.00 245.25,552.00 754.75,552.00" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,286.60 317.59,624.16 682.41,624.16" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,407.56 385.08,673.33 614.92,673.33" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+            </g>
+            <g id="bindu"><circle cx="500.00" cy="500.00" r="9" fill="currentColor" stroke="none"/></g>
+          </svg>
+        </span>
+        <span class="brand__name">
+          <em>Shree Kunal Acharya</em>
+          <small>Vastu Shastra Consultant &middot; Andheri West, Mumbai</small>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
-      </button>
-      <nav class="nav" id="primary-nav" aria-label="Primary">
-          <a href="index.html">Vāstu</a>
-          <a href="services.html">Guidance</a>
-          <a href="about.html">The Practice</a>
-          <a href="testimonials.html" aria-current="page">Families</a>
-          <a href="contact.html">Contact</a>
-          <a class="nav__cta" href="contact.html#message">Write to Guruji</a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html#method">Method</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">Questions</a>
+        <a href="testimonials.html" aria-current="page">Testimonials</a>
+        <a href="contact.html" class="nav__cta">Contact us</a>
       </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="3" y1="6" x2="17" y2="6"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14" x2="17" y2="14"/>
+        </svg>
+      </button>
     </div>
   </header>
 
   <main>
+
+    <!-- Page head ------------------------------------------------------------ -->
     <section class="page-head">
-      <div class="page-head__mandala" aria-hidden="true"><svg class="ph-mandala" xmlns="http://www.w3.org/2000/svg" viewBox="-34 -34 968 968" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" role="presentation">
-<g stroke-opacity=".5">
-<line x1="100" y1="0" x2="100" y2="900"/><line x1="0" y1="100" x2="900" y2="100"/>
-<line x1="200" y1="0" x2="200" y2="900"/><line x1="0" y1="200" x2="900" y2="200"/>
-<line x1="300" y1="0" x2="300" y2="900"/><line x1="0" y1="300" x2="900" y2="300"/>
-<line x1="400" y1="0" x2="400" y2="900"/><line x1="0" y1="400" x2="900" y2="400"/>
-<line x1="500" y1="0" x2="500" y2="900"/><line x1="0" y1="500" x2="900" y2="500"/>
-<line x1="600" y1="0" x2="600" y2="900"/><line x1="0" y1="600" x2="900" y2="600"/>
-<line x1="700" y1="0" x2="700" y2="900"/><line x1="0" y1="700" x2="900" y2="700"/>
-<line x1="800" y1="0" x2="800" y2="900"/><line x1="0" y1="800" x2="900" y2="800"/>
-</g>
-<g stroke-opacity=".3"><line x1="0" y1="0" x2="900" y2="900"/><line x1="900" y1="0" x2="0" y2="900"/></g>
-<circle cx="450" cy="450" r="450" stroke-opacity=".4"/>
-<rect x="300" y="300" width="300" height="300" stroke-width="4"/>
-<circle cx="450" cy="450" r="15" fill="currentColor" stroke="none"/>
-<g stroke-width="3">
-<rect x="0" y="0" width="900" height="900"/>
-<rect x="-16" y="-16" width="932" height="932"/>
-<rect x="-32" y="-32" width="964" height="964"/>
-</g><g stroke-width="3.5">
-<rect x="0" y="0" width="100" height="100"/>
-<rect x="800" y="0" width="100" height="100"/>
-<rect x="0" y="800" width="100" height="100"/>
-<rect x="800" y="800" width="100" height="100"/>
-</g></svg></div>
+      <div class="wrap page-head__inner">
+        <div>
+          <span class="eyebrow eyebrow--left">Client notes</span>
+          <h1>Guidance, in <em>their own words</em></h1>
+          <p class="lede" style="margin-top: 1.25rem;">Every quote here was read, agreed to and given in writing by the client it belongs to. Nothing is invented and nothing is bought.</p>
+        </div>
+        <a href="contact.html#contact" class="btn btn--filled">
+          Talk to Guruji
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimonials (cream) --------------------------------------------------- -->
+    <section class="section section--light">
       <div class="wrap">
-        <div class="page-head__inner">
-          <div>
-            <span class="eyebrow" lang="sa">परिवार</span>
-            <h1>Families Guruji has <em class="gilt">guided</em></h1>
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Words from clients</span>
+          <h2>What it is like to <em>work with Guruji</em></h2>
+          <svg class="ornament" viewBox="0 0 132 14" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <path d="M0 7h44M88 7h44"/><path d="M56 7l10-6 10 6-10 6-10-6z"/><circle cx="66" cy="7" r="1.8"/><circle cx="48" cy="7" r="1.5"/><circle cx="84" cy="7" r="1.5"/>
+          </svg>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Residential Vastu</span>
+            <p class="testimonial-card__quote">Working with Guruji gave us a completely different perspective on our home. The consultation was detailed, systematic and personalised to our family&rsquo;s requirements. What I appreciated most was that every recommendation was explained clearly rather than simply being given as a list of remedies. The entire experience felt professional, practical and reassuring.</p>
+            <p class="testimonial-card__author">Sangeeta Sharma <span>Powai</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Property Selection</span>
+            <p class="testimonial-card__quote">Before finalising our property, we wanted to make sure we were making the right decision from a Vastu perspective. Acharya Ji carefully studied the property and guided us through the important aspects that we had completely overlooked. His approach gave us much greater confidence in our decision.</p>
+            <p class="testimonial-card__author">Rakesh Julia <span>CA &middot; Dubai</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Commercial Vastu</span>
+            <p class="testimonial-card__quote">As a business owner, I was looking for Vastu guidance that would be practical for our workplace rather than purely theoretical. The consultation was extremely detailed and the recommendations were presented in a very professional manner. We now have a much better understanding of how the space can be planned and utilised more effectively.</p>
+            <p class="testimonial-card__author">Chadha Shahab <span>Business &middot; Noida</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Plot Vastu</span>
+            <p class="testimonial-card__quote">We consulted Shree Kunal Acharya before proceeding with a plot purchase. His analysis helped us understand the property&rsquo;s orientation, layout and Vastu considerations in a much clearer way. His attention to detail stood out to us, and we felt much more confident moving forward after the consultation.</p>
+            <p class="testimonial-card__author">Alok Rajmani <span>Lawyer &middot; Pune</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Personal Consultation</span>
+            <p class="testimonial-card__quote">What impressed me was the way Kunal Ji approached our requirements personally. He took the time to understand our concerns, study the space and explain his recommendations properly. There was no pressure or unnecessary complexity, just clear and thoughtful guidance.</p>
+            <p class="testimonial-card__author">A client <span>Byculla</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Personal Consultation</span>
+            <p class="testimonial-card__quote">We approached Shree Kunal Acharya because we wanted to improve the overall energy and harmony of our space. The consultation was insightful and helped us look at our surroundings in a completely different way. His guidance was explained in a simple and practical manner, making it easy for us to implement.</p>
+            <p class="testimonial-card__author">A client <span>Sharjah</span></p>
+          </article>
+
+          <article class="testimonial-card">
+            <span class="testimonial-card__category">Industrial Vastu</span>
+            <p class="testimonial-card__quote">Industrial spaces involve many practical considerations, so we were looking for someone who could understand both the requirements of the property and the principles of Vastu. Acharya Ji provided a structured analysis and explained the recommendations with clarity. We found his approach professional, detailed and highly focused on our specific requirements.</p>
+            <p class="testimonial-card__author">A client <span>Surat</span></p>
+          </article>
+        </div>
+
+        <div class="limits limits--three" style="margin-top:var(--space-5);">
+          <div class="limits__item">
+            <h4>Client homes stay private</h4>
+            <p>What Guruji sees on a site visit belongs to the people who live or work there, not to this website.</p>
+          </div>
+          <div class="limits__item">
+            <h4>Written consent, or nothing</h4>
+            <p>No quote is published until the client has seen it in full and given permission in writing.</p>
+          </div>
+          <div class="limits__item">
+            <h4>Nothing invented, nothing bought</h4>
+            <p>No made-up names, no purchased reviews, no star ratings assembled to fill a page.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--light">
-      <div class="wrap" style="max-width:46em">
-        <p class="lede">These words are shared with the family's own permission, in their own words. Nothing here is invented, and nothing here is bought.</p>
-      </div>
-    </section>
-
+    <!-- What can be verified (dark) ------------------------------------------ -->
     <section class="section section--dark">
       <div class="wrap">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">In their own words</span>
-          <h2>What families have <em>said</em></h2>
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Instead of quotes</span>
+          <h2>What can be <em>checked today</em></h2>
+          <svg class="ornament" viewBox="0 0 132 14" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <path d="M0 7h44M88 7h44"/><path d="M56 7l10-6 10 6-10 6-10-6z"/><circle cx="66" cy="7" r="1.8"/><circle cx="48" cy="7" r="1.5"/><circle cx="84" cy="7" r="1.5"/>
+          </svg>
+          <p class="lede" style="margin-inline:auto;">Until there are quotes to publish, judge the practice on what is stated plainly everywhere else on this site.</p>
         </div>
 
-        <div class="voices reveal">
-          <div class="voice">
-            <span class="voice__kind">01 &middot; Residential Vāstu</span>
-            <span class="voice__place">Powai</span>
-            <p class="voice__quote">&ldquo;Working with Guruji gave us a completely different perspective on our home. The consultation was detailed, systematic and personalised to our family's requirements. Every recommendation was explained clearly rather than simply handed over as a list of remedies. The entire experience felt professional, practical and reassuring.&rdquo;</p>
-            <cite class="voice__cite">Sangeeta Sharma</cite>
+        <div class="trust trust--six">
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M24 4l4 7h-8l4-7z"/><path d="M14 40V22l10-9 10 9v18"/><path d="M10 40h28"/><path d="M20 40V30h8v10"/><path d="M17 24h14"/>
+            </svg>
+            <span class="trust__text"><b>5+ years</b>of practice</span>
           </div>
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <path d="M8 22L24 9l16 13"/><path d="M12 20v19h24V20"/><path d="M20 39V27h8v12"/>
+            </svg>
+            <span class="trust__text"><b>100+ properties</b>assessed</span>
+          </div>
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5.5 6.5 5.5 27.5 0 34M24 7c-5.5 6.5-5.5 27.5 0 34"/></svg>
+            <span class="trust__text"><b>Mumbai &amp; remote</b>on site and online</span>
+          </div>
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M24 5l15 6v11c0 10-6.5 17.5-15 21-8.5-3.5-15-11-15-21V11z"/><path d="M17 24l5 5 10-10"/></svg>
+            <span class="trust__text"><b>Written report</b>every engagement</span>
+          </div>
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="19" r="11"/><path d="M17 28l-3 15 10-5 10 5-3-15"/><path d="M20 19l3 3 5-6"/></svg>
+            <span class="trust__text"><b>Fee quoted first</b>before you commit</span>
+          </div>
+          <div class="trust__item">
+            <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M12 12l24 24"/></svg>
+            <span class="trust__text"><b>No objects sold</b>advice, not merchandise</span>
+          </div>
+        </div>
 
-          <div class="voice">
-            <span class="voice__kind">02 &middot; Property Selection</span>
-            <span class="voice__place">Dubai</span>
-            <p class="voice__quote">&ldquo;Before finalising our property, we wanted to be certain we were making the right decision from a Vāstu perspective. Acharya Ji carefully studied the property and guided us through aspects we had completely overlooked. His approach gave us far greater confidence in our decision.&rdquo;</p>
-            <cite class="voice__cite">Rakesh Julia &middot; CA</cite>
-          </div>
-
-          <div class="voice">
-            <span class="voice__kind">03 &middot; Commercial Vāstu</span>
-            <span class="voice__place">Noida</span>
-            <p class="voice__quote">&ldquo;As a business owner, I was looking for Vāstu guidance that would be practical for our workplace rather than purely theoretical. The consultation was extremely detailed and the recommendations were presented professionally. We now understand how the space can be planned and used far more effectively.&rdquo;</p>
-            <cite class="voice__cite">Chadha Shahab &middot; Business</cite>
-          </div>
-
-          <div class="voice">
-            <span class="voice__kind">04 &middot; Plot Vāstu</span>
-            <span class="voice__place">Pune</span>
-            <p class="voice__quote">&ldquo;We consulted Shree Kunal Acharya before proceeding with a plot purchase. His analysis helped us understand the property's orientation, layout and Vāstu considerations far more clearly. His attention to detail stood out, and we felt much more confident moving forward after the consultation.&rdquo;</p>
-            <cite class="voice__cite">Alok Rajmani &middot; Lawyer</cite>
-          </div>
-
-          <div class="voice">
-            <span class="voice__kind">05 &middot; Personal Connections</span>
-            <span class="voice__place">Byculla</span>
-            <p class="voice__quote">&ldquo;What impressed me was the way Kunal Ji approached our requirements personally. He took the time to understand our concerns, study the space and explain his recommendations properly. There was no pressure or unnecessary complexity, just clear and thoughtful guidance.&rdquo;</p>
-            <cite class="voice__cite">A family in Byculla</cite>
-          </div>
-
-          <div class="voice">
-            <span class="voice__kind">06 &middot; Personal Connections</span>
-            <span class="voice__place">Sharjah</span>
-            <p class="voice__quote">&ldquo;We approached Shree Kunal Acharya because we wanted to improve the overall energy and harmony of our space. The consultation was insightful and helped us look at our surroundings in a completely different way. His guidance was explained simply and practically, making it easy to put into place.&rdquo;</p>
-            <cite class="voice__cite">A family in Sharjah</cite>
-          </div>
-
-          <div class="voice">
-            <span class="voice__kind">07 &middot; Personal Connections</span>
-            <span class="voice__place">Surat</span>
-            <p class="voice__quote">&ldquo;Industrial spaces involve many practical considerations, so we were looking for someone who could understand both the property's requirements and the principles of Vāstu. Acharya Ji provided a structured analysis and explained the recommendations with clarity &mdash; professional, detailed and focused on our specific needs.&rdquo;</p>
-            <cite class="voice__cite">A client in Surat</cite>
-          </div>
+        <div class="services-cta">
+          <a href="about.html" class="btn btn--outline">
+            Read the full background
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Past clients (cream) -------------------------------------------------- -->
     <section class="section section--light">
       <div class="wrap">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">Where guidance has travelled</span>
-          <h2>Families in <em class="gilt">these places</em></h2>
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Past clients</span>
+          <h2>Worked with Guruji before? <em>Say so in your own words</em></h2>
+          <svg class="ornament" viewBox="0 0 132 14" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <path d="M0 7h44M88 7h44"/><path d="M56 7l10-6 10 6-10 6-10-6z"/><circle cx="66" cy="7" r="1.8"/><circle cx="48" cy="7" r="1.5"/><circle cx="84" cy="7" r="1.5"/>
+          </svg>
+          <p>If Guruji has assessed your home, office, plot or floor plan and you are willing to be quoted, send a few lines using the form or by email. You will see the exact wording before anything is published, and you decide how much of your name appears.</p>
         </div>
-        <ul class="places reveal" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
-          <li>Powai</li>
-          <li>Byculla</li>
-          <li>Pune</li>
-          <li>Noida</li>
-          <li>Surat</li>
-          <li>Dubai</li>
-          <li>Sharjah</li>
-        </ul>
+
+        <div class="consent-actions">
+          <a href="contact.html?service=sharing%20a%20testimonial%20as%20a%20past%20client#contact" class="btn btn--dark">
+            Share your testimonial
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="mailto:hello@shreekunalconsultancy.com" class="btn btn--outline">Write instead</a>
+        </div>
+        <p class="consent-actions__note">hello@shreekunalconsultancy.com</p>
       </div>
     </section>
 
-    <section class="section cta-strip seam">
-      <div class="wrap" style="text-align:center;max-width:44em">
-        <span class="eyebrow" lang="sa">सम्पर्क</span>
-        <h2>To ask about a <em>dwelling</em></h2>
-        <p class="lede" style="margin-inline:auto">A message may be sent at any hour. Guruji speaks between 10:00 and 20:30 India time, and holds calls across time zones by arrangement.</p>
-        <div class="hero__ctas" style="justify-content:center">
-          <a href="contact.html#message" class="btn btn--filled">Write to Guruji</a>
-          <a href="contact.html" class="btn btn--outline">All ways to reach</a>
-        </div>
+    <!-- CTA band -------------------------------------------------------------- -->
+    <section class="cta-band">
+      <div class="cta-band__scrim" aria-hidden="true"></div>
+      <div class="wrap cta-band__inner">
+        <h2>Rather judge the work <em>for yourself</em>?</h2>
+        <p>Start with the free twenty-minute call. No obligation, and a fee quoted before you commit.</p>
+        <a href="contact.html#contact" class="btn btn--dark">
+          Talk to Guruji
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span class="footer__om" aria-hidden="true">ॐ</span>
-      <p class="footer__deva" lang="sa">वसुधैव कुटुम्बकम्</p>
-      <p class="footer__name">Shree Kunal Acharya &middot; Vāstu Śāstra</p>
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="index.html">Vāstu</a>
-        <a href="services.html">Guidance</a>
-        <a href="about.html">The Practice</a>
-        <a href="testimonials.html">Families</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <span class="footer__copy">Andheri West, Mumbai 400058 &middot; consultations worldwide &middot; &copy; 2026</span>
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 1000 1000" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+            <g id="triangles">
+              <polygon points="500.00,523.11 366.22,286.60 633.78,286.60" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,673.33 336.58,355.86 663.42,355.86" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,760.00 256.99,407.56 743.01,407.56" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,624.16 412.84,447.89 587.16,447.89" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,552.00 445.82,473.05 554.18,473.05" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,355.86 422.67,523.11 577.33,523.11" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,240.00 245.25,552.00 754.75,552.00" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,286.60 317.59,624.16 682.41,624.16" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+              <polygon points="500.00,407.56 385.08,673.33 614.92,673.33" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+            </g>
+            <g id="bindu"><circle cx="500.00" cy="500.00" r="9" fill="currentColor" stroke="none"/></g>
+          </svg>
+        </span>
+        <span class="footer__name">Shree Kunal Acharya</span>
+      </div>
+      <span class="footer__copy">&copy; 2026 Shree Kunal Acharya. All rights reserved.</span>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -40,38 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Contact form: prevent actual submission, show status message
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const status = document.getElementById('formStatus');
-      if (status) {
-        status.textContent = 'Thank you. Your message has been received. Kunal will reply within 24 hours.';
-        status.className = 'form__status form__status--ok';
-      }
-      form.reset();
-      setTimeout(() => {
-        if (status) {
-          status.className = 'form__status';
-          status.textContent = '';
-        }
-      }, 7000);
-    });
-  }
-
-  // Reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  if (revealEls.length && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => io.observe(el));
-  }
 });

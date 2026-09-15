@@ -18,17 +18,17 @@
   /* Metal ----------------------------------------------------------------- */
   --gold:          #C9922F;
   --gold-mid:      #D9AE55;
-  --gold-lite:     #F0DCA4;
+  --gold-lite:     #E5C178;
   --gold-deep:     #8A6420;
   --brass:         #A87C2C;
   --maroon:        #5C1219;
 
   --metal: linear-gradient(135deg,
-            #6B4A15 0%, #C9922F 14%, #FFF3D6 28%, #E9CE79 40%,
-            #B8862E 54%, #FFF8E4 68%, #8A6420 82%, #EED89C 100%);
+            #6B4A15 0%, #C9922F 14%, #F0D89C 28%, #E9CE79 40%,
+            #B8862E 54%, #F0D89C 68%, #8A6420 82%, #E5C178 100%);
   --metal-lite: linear-gradient(100deg,
-            #C39A34 0%, #FFF8E4 20%, #F4E3B0 38%, #FFFCF2 52%,
-            #D9AE55 68%, #FFF0C4 84%, #C39A34 100%);
+            #C39A34 0%, #EACD82 20%, #E5C178 38%, #F0D89C 52%,
+            #D9AE55 68%, #E8C878 84%, #C39A34 100%);
   --metal-rule: linear-gradient(90deg,
             transparent 0%, rgba(201,146,47,.12) 10%, var(--gold-mid) 50%,
             rgba(201,146,47,.12) 90%, transparent 100%);
@@ -43,7 +43,7 @@
   --line-gold:     rgba(201,146,47,.28);
   --line-bright:   rgba(201,146,47,.58);
   --line-light:    rgba(138,100,32,.28);
-  --focus:         #F0DCA4;
+  --focus:         #E5C178;
 
   --glow-sm: 0 8px 30px -14px rgba(201,146,47,.45);
   --glow-md: 0 20px 55px -22px rgba(201,146,47,.55);

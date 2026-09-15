@@ -9,7 +9,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Services | Shree Kunal Acharya Vastu Consultant, Mumbai">
-  <meta property="og:description" content="Six Vastu engagements, each stating what is included and what is not.">
+  <meta property="og:description" content="Six Vastu engagements, each scoped to your property, with a fee quoted in writing.">
   <meta property="og:url" content="https://shreekunalconsultancy.com/services.html">
   <meta property="og:image" content="https://shreekunalconsultancy.com/assets/images/hero-vedic-altar.jpg">
   <meta property="og:image:width" content="1731">
@@ -53,58 +53,20 @@
       box-shadow: var(--glow-sm);
     }
     .svc__badge svg { width: 28px; height: 28px; color: var(--brass); }
+    .svc__content { align-self: center; }
     .svc__num {
       display: block; font-family: var(--font-ui); font-size: 0.64rem;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
     }
     .section--light .svc__num { color: var(--brass); }
     .svc h3 { font-size: var(--step-2); margin-bottom: var(--space-2); }
-    .svc__desc { margin-bottom: var(--space-3); max-width: 26em; }
+    .svc__desc { margin-bottom: var(--space-3); max-width: 32em; }
     .svc__cta { margin-top: var(--space-1); }
-
-    .svc__panels { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
-    .svc__panel { padding: var(--space-3); border: 1px solid var(--line-light); }
-    .svc__panel--in {
-      background: rgba(201,146,47,.09);
-      border-left: 3px solid var(--gold);
-    }
-    .svc__panel--not {
-      background: transparent; border-style: dashed;
-    }
-    .section--dark .svc__panel { border-color: var(--line-gold); }
-    .section--dark .svc__panel--in {
-      background: linear-gradient(165deg, rgba(201,146,47,.12), rgba(201,146,47,.02));
-      border-left: 3px solid var(--gold);
-    }
-
-    .svc__panel-label {
-      display: flex; align-items: center; gap: 0.55rem;
-      font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--brass);
-      margin-bottom: var(--space-2); padding-bottom: var(--space-1);
-      border-bottom: 1px solid var(--line-light);
-    }
-    .section--dark .svc__panel-label { color: var(--gold); border-bottom-color: var(--line-gold); }
-    .svc__panel--not .svc__panel-label { color: var(--tx-light-muted); }
-    .section--dark .svc__panel--not .svc__panel-label { color: var(--tx-dark-muted); }
-    .svc__panel-label svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-    .svc__items { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.65rem; }
-    .svc__items li {
-      position: relative; padding-left: 1.6rem;
-      font-size: 0.9rem; line-height: 1.6; color: var(--tx-light-muted);
-    }
-    .section--dark .svc__items li { color: var(--tx-dark-muted); }
-    .svc__items li::before { position: absolute; left: 0; top: 0; font-size: 0.85rem; line-height: 1.7; }
-    .svc__panel--in .svc__items li::before { content: "\2713"; color: var(--gold); }
-    .svc__panel--not .svc__items li::before { content: "\2715"; color: var(--maroon); opacity: .8; }
-    .section--dark .svc__panel--not .svc__items li::before { color: var(--tx-dark-muted); opacity: .9; }
 
     .cta-band__ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
     .page-head .lede { color: var(--tx-dark-muted); margin-top: var(--space-3); }
 
     @media (max-width: 980px) { .svc { grid-template-columns: 1fr; } }
-    @media (max-width: 620px) { .svc__panels { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -186,7 +148,7 @@
       <div class="wrap page-head__inner">
         <div>
           <span class="eyebrow eyebrow--left">Services</span>
-          <h1>Six engagements. Each states <em>what is not included</em>.</h1>
+          <h1>Six engagements, each <em>scoped to your property</em>.</h1>
           <p class="lede">Every service is scoped to your property type, goals and budget. No unnecessary work, only what adds real function to your space.</p>
         </div>
         <a href="contact.html#contact" class="btn btn--filled">
@@ -205,102 +167,54 @@
           <svg class="ornament" viewBox="0 0 132 14" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
             <path d="M0 7h44M88 7h44"/><path d="M56 7l10-6 10 6-10 6-10-6z"/><circle cx="66" cy="7" r="1.8"/><circle cx="48" cy="7" r="1.5"/><circle cx="84" cy="7" r="1.5"/>
           </svg>
-          <p>Every engagement states, in writing, what is included and what is not. You are quoted a fee before you commit to anything.</p>
+          <p>Every engagement is scoped to your property, with a fee quoted in writing before you commit to anything.</p>
         </div>
 
         <div class="svc-list">
 
           <article class="svc" id="residential">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-grha.webp" type="image/webp">
-                  <img src="assets/images/service-grha.jpg" alt="A softly lit living room interior, warm wood tones and natural light" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <path d="M8 30L32 12l24 18"/><path d="M13 27v25h38V27"/><path d="M26 52V38h12v14"/><path d="M23 33h6M35 33h6"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-grha.webp" type="image/webp">
+                <img src="assets/images/service-grha.jpg" alt="A softly lit living room interior, warm wood tones and natural light" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <path d="M8 30L32 12l24 18"/><path d="M13 27v25h38V27"/><path d="M26 52V38h12v14"/><path d="M23 33h6M35 33h6"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">01 / Residential</span>
               <h3>Residential</h3>
-              <p class="svc__desc">Flats, bungalows, villas and independent houses, existing or under construction</p>
+              <p class="svc__desc">Flats, bungalows, villas and independent houses, existing or under construction. An on-site compass assessment, a prioritised written report, and one follow-up call.</p>
               <a class="btn btn--dark svc__cta" href="contact.html?service=Residential%20Vastu#contact">
                 Enquire about Residential
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>On-site compass assessment</li>
-                  <li>Prioritised written report</li>
-                  <li>One follow-up call</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>Structural or architectural drawings</li>
-                  <li>Remedies involving demolition</li>
-                </ul>
-              </div>
-            </div>
           </article>
 
           <article class="svc" id="commercial">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-vanijya.webp" type="image/webp">
-                  <img src="assets/images/service-vanijya.jpg" alt="A minimal office desk with a laptop, a plant and morning light" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <path d="M10 54V18h20v36M34 54V28h20v26M6 54h52"/><path d="M15 25h4M15 33h4M15 41h4M25 25h4M25 33h4M25 41h4M40 35h4M40 43h4M48 35h4M48 43h4"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-vanijya.webp" type="image/webp">
+                <img src="assets/images/service-vanijya.jpg" alt="A minimal office desk with a laptop, a plant and morning light" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <path d="M10 54V18h20v36M34 54V28h20v26M6 54h52"/><path d="M15 25h4M15 33h4M15 41h4M25 25h4M25 33h4M25 41h4M40 35h4M40 43h4M48 35h4M48 43h4"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">02 / Commercial</span>
               <h3>Commercial</h3>
-              <p class="svc__desc">Offices, retail shops, showrooms, clinics, restaurants and hospitality spaces</p>
+              <p class="svc__desc">Offices, retail shops, showrooms, clinics, restaurants and hospitality spaces. A layout and entrance analysis, desk and workflow corrections, and one follow-up call.</p>
               <a class="btn btn--dark svc__cta" href="contact.html?service=Commercial%20Vastu#contact">
                 Enquire about Commercial
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-            </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>Layout and entrance analysis</li>
-                  <li>Desk and workflow corrections</li>
-                  <li>One follow-up call</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>Interior design or fit-out drawings</li>
-                  <li>Staff-facing presentation deck</li>
-                </ul>
-              </div>
             </div>
           </article>
 
@@ -314,95 +228,48 @@
         <div class="svc-list">
 
           <article class="svc" id="industrial">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-udyoga.webp" type="image/webp">
-                  <img src="assets/images/service-udyoga.jpg" alt="The floor of a warehouse and workshop, stacked with pallets and stores" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <path d="M8 54V30l14 8V30l14 8V22h20v32z"/><path d="M6 54h52"/><path d="M44 22V12h6v10"/><path d="M46 36h6M46 44h6"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-udyoga.webp" type="image/webp">
+                <img src="assets/images/service-udyoga.jpg" alt="The floor of a warehouse and workshop, stacked with pallets and stores" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <path d="M8 54V30l14 8V30l14 8V22h20v32z"/><path d="M6 54h52"/><path d="M44 22V12h6v10"/><path d="M46 36h6M46 44h6"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">03 / Industrial</span>
               <h3>Industrial</h3>
-              <p class="svc__desc">Factories, warehouses, production floors and logistics facilities across scales</p>
+              <p class="svc__desc">Factories, warehouses, production floors and logistics facilities across scales. A plot and machine orientation review, workflow-aligned recommendations, and a written summary.</p>
               <a class="btn btn--outline svc__cta" href="contact.html?service=Industrial%20Vastu#contact">
                 Enquire about Industrial
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>Plot and machine orientation review</li>
-                  <li>Workflow-aligned recommendations</li>
-                  <li>Written summary</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>Equipment relocation labour</li>
-                  <li>Production downtime planning</li>
-                </ul>
-              </div>
-            </div>
           </article>
 
           <article class="svc" id="property-selection">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-bhumi.webp" type="image/webp">
-                  <img src="assets/images/service-bhumi.jpg" alt="An open grassed plot bordered by trees, seen before it is read" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <path d="M32 14L56 28 32 42 8 28z"/><path d="M8 36l24 14 24-14"/><path d="M32 6v8"/><circle cx="32" cy="28" r="4"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-bhumi.webp" type="image/webp">
+                <img src="assets/images/service-bhumi.jpg" alt="An open grassed plot bordered by trees, seen before it is read" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <path d="M32 14L56 28 32 42 8 28z"/><path d="M8 36l24 14 24-14"/><path d="M32 6v8"/><circle cx="32" cy="28" r="4"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">04 / Property Selection</span>
               <h3>Property Selection</h3>
-              <p class="svc__desc">Vastu evaluation before you commit to a purchase, the most cost-effective stage to consult</p>
+              <p class="svc__desc">Vastu evaluation before you commit to a purchase, the most cost-effective stage to consult. A floor plan and plot analysis, ending in a clear pass, proceed-with-changes, or avoid verdict.</p>
               <a class="btn btn--outline svc__cta" href="contact.html?service=Property%20Selection%20Vastu#contact">
                 Enquire about Property Selection
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-            </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>Floor plan and plot analysis</li>
-                  <li>Pass / proceed-with-changes / avoid verdict</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>Legal or title due diligence</li>
-                  <li>Price or valuation opinion</li>
-                </ul>
-              </div>
             </div>
           </article>
 
@@ -416,96 +283,48 @@
         <div class="svc-list">
 
           <article class="svc" id="plot-construction">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-silanyasa.webp" type="image/webp">
-                  <img src="assets/images/service-silanyasa.jpg" alt="Marigold petals in a brass uruli, set out for a foundation rite" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="3"/><path d="M40 24L36 36l-12 4 4-12z"/><path d="M32 6v6M32 52v6M6 32h6M52 32h6"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-silanyasa.webp" type="image/webp">
+                <img src="assets/images/service-silanyasa.jpg" alt="Marigold petals in a brass uruli, set out for a foundation rite" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="3"/><path d="M40 24L36 36l-12 4 4-12z"/><path d="M32 6v6M32 52v6M6 32h6M52 32h6"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">05 / Plot &amp; Construction</span>
               <h3>Plot &amp; Construction</h3>
-              <p class="svc__desc">Layout planning at the design stage, before excavation, before pouring</p>
+              <p class="svc__desc">Layout planning at the design stage, before excavation, before pouring. A review of your architectural plans with marked corrections, and on-site visits at key stages.</p>
               <a class="btn btn--dark svc__cta" href="contact.html?service=Plot%20and%20Construction%20Vastu#contact">
                 Enquire about Plot &amp; Construction
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>Review of architectural plans</li>
-                  <li>Marked corrections</li>
-                  <li>On-site visits at key stages</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>Structural engineering sign-off</li>
-                  <li>Contractor supervision</li>
-                </ul>
-              </div>
-            </div>
           </article>
 
           <article class="svc" id="remote">
-            <div class="svc__intro">
-              <div class="svc__photo">
-                <picture>
-                  <source srcset="assets/images/service-videsa.webp" type="image/webp">
-                  <img src="assets/images/service-videsa.jpg" alt="A wooden pier reaching toward the sea at sunset" width="1200" height="900" loading="lazy" decoding="async">
-                </picture>
-                <span class="svc__badge">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                    <rect x="12" y="8" width="40" height="48"/><path d="M24 8V4h16v4"/><path d="M22 24h20M22 32h20M22 40h12"/>
-                  </svg>
-                </span>
-              </div>
+            <div class="svc__photo">
+              <picture>
+                <source srcset="assets/images/service-videsa.webp" type="image/webp">
+                <img src="assets/images/service-videsa.jpg" alt="A wooden pier reaching toward the sea at sunset" width="1200" height="900" loading="lazy" decoding="async">
+              </picture>
+              <span class="svc__badge">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                  <rect x="12" y="8" width="40" height="48"/><path d="M24 8V4h16v4"/><path d="M22 24h20M22 32h20M22 40h12"/>
+                </svg>
+              </span>
+            </div>
+            <div class="svc__content">
               <span class="svc__num">06 / Remote</span>
               <h3>Remote</h3>
-              <p class="svc__desc">For clients outside Mumbai, floor plan analysis over a call, with written recommendations</p>
+              <p class="svc__desc">For clients outside Mumbai, floor plan analysis over a video or phone consultation, with a detailed PDF report and a follow-up within 7 days.</p>
               <a class="btn btn--dark svc__cta" href="contact.html?service=Remote%20Vastu%20consultation#contact">
                 Enquire about Remote
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-            </div>
-
-            <div class="svc__panels">
-              <div class="svc__panel svc__panel--in">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 13l4 4 10-10"/></svg>
-                  Included
-                </span>
-                <ul class="svc__items">
-                  <li>Video or phone consultation</li>
-                  <li>Detailed PDF report</li>
-                  <li>Follow-up within 7 days</li>
-                </ul>
-              </div>
-              <div class="svc__panel svc__panel--not">
-                <span class="svc__panel-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                  Not included
-                </span>
-                <ul class="svc__items">
-                  <li>In-person site visit</li>
-                  <li>Physical remedy sourcing</li>
-                </ul>
-              </div>
             </div>
           </article>
 

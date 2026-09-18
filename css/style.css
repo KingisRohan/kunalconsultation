@@ -4,6 +4,8 @@
    ========================================================================== */
 
 :root {
+  color-scheme: dark;
+
   /* Dark ground ----------------------------------------------------------- */
   --ink:           #0B0704;
   --ink2:          #140D06;
@@ -98,6 +100,7 @@ body {
 img, svg { display: block; max-width: 100%; height: auto; }
 button { font: inherit; cursor: pointer; }
 a { color: inherit; text-decoration: none; }
+a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: var(--r-sm); }
 
 /* Skip link ----------------------------------------------------------------- */
@@ -258,6 +261,7 @@ p { margin: 0 0 var(--space-2); }
   position: sticky; top: 0; z-index: 100;
   border-bottom: 1px solid var(--line-gold);
 }
+#contact { scroll-margin-top: 9rem; }
 .site-header::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(11,7,4,.94);
@@ -496,14 +500,35 @@ p { margin: 0 0 var(--space-2); }
   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .limits__item:hover { border-color: var(--gold); box-shadow: 0 18px 40px -26px rgba(90,60,10,.5); }
-.limits__item h4 { font-size: 0.95rem; margin-bottom: var(--space-1); color: var(--tx-light); }
+.limits__item h3 { font-family: var(--font-ui); font-size: 0.95rem; letter-spacing: 0.01em; margin-bottom: var(--space-1); color: var(--tx-light); }
 .limits__item p { color: var(--tx-light-muted); font-size: 0.88rem; margin: 0; }
+.about-photo-wrap { position: relative; }
+.about-photo-wrap::before {
+  content: "";
+  position: absolute; inset: -14px;
+  border-radius: var(--arch);
+  background: radial-gradient(closest-side, rgba(201,146,47,.45), rgba(201,146,47,0) 72%);
+  z-index: -1;
+  animation: auraPulse 6s var(--ease) infinite;
+  pointer-events: none;
+}
+@keyframes auraPulse {
+  0%, 100% { opacity: .5; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.05); }
+}
 .about-photo {
   aspect-ratio: 4 / 5; border-radius: var(--arch); overflow: hidden;
   border: 1px solid var(--line-light);
   box-shadow: 0 30px 70px -34px rgba(60,40,10,.6);
 }
-.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: kenBurns 22s ease-in-out infinite alternate;
+}
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.07); }
+}
 
 /* CTA band -----------------------------------------------------------------------*/
 .cta-band {
@@ -757,10 +782,26 @@ body.nav-open { overflow: hidden; }
   padding-right: 2.5rem;
 }
 .form__field select option { background: var(--ink2); color: var(--tx-dark); }
-.form__phone { display: flex; gap: 0.6rem; }
-.form__phone select { flex: 0 0 auto; width: auto; min-width: 8rem; }
+.form__phone {
+  display: flex; align-items: stretch;
+  background: rgba(11,7,4,.55);
+  border: 1px solid var(--line-gold);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.form__phone:focus-within { border-color: var(--line-bright); box-shadow: var(--glow-sm); transform: translateY(-1px); }
+.form__phone select, .form__phone input {
+  background-color: transparent; border: none; box-shadow: none !important;
+  transition: background-color var(--dur-fast) var(--ease);
+}
+.form__phone select {
+  flex: 0 0 clamp(6.25rem, 26vw, 10rem);
+  width: auto; min-width: 0;
+  border-right: 1px solid var(--line-gold);
+  padding-right: 1.8rem; background-position: right 0.6rem center;
+}
 .form__phone input { flex: 1 1 auto; min-width: 0; }
-@media (max-width: 480px) { .form__phone { flex-wrap: wrap; } .form__phone select { flex: 1 1 100%; } .form__phone input { flex: 1 1 100%; } }
+.form__phone select:focus, .form__phone input:focus { background-color: rgba(201,146,47,.08); }
+@media (max-width: 360px) { .form__phone select { flex-basis: 5.75rem; padding-right: 1.5rem; } }
 .form__field input::placeholder, .form__field textarea::placeholder { color: rgba(194,172,132,.65); }
 .form__field input:focus, .form__field textarea:focus, .form__field select:focus {
   outline: none; border-color: var(--line-bright); box-shadow: var(--glow-sm);

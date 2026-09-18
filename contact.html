@@ -137,46 +137,15 @@
             <p class="form__note">Guruji reads every enquiry personally and replies within 24 hours during business hours.</p>
 
             <!--
-              ============================================================================
-              ENQUIRY FORM DELIVERY: ACTION REQUIRED BY THE SITE OWNER
-              ----------------------------------------------------------------------------
-              This form delivers straight into a Google Sheet via a small Google Apps
-              Script, no paid service needed. To activate it, do this once:
-
-                1. Go to https://sheets.google.com and create a new, blank sheet.
-                   In row 1, add these column headings: Timestamp | Name | Phone |
-                   Email | Location | Enquiry Type
-
-                2. In that sheet, open Extensions > Apps Script. Delete anything in
-                   the editor and paste this in its place:
-
-                     function doPost(e) {
-                       var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-                       var d = e.parameter;
-                       sheet.appendRow([
-                         new Date(), d.name || '', d.phone || '', d.email || '',
-                         d.location || '', d.enquiry_type || ''
-                       ]);
-                       return ContentService.createTextOutput(JSON.stringify({ result: 'success' }))
-                         .setMimeType(ContentService.MimeType.JSON);
-                     }
-
-                3. Click Deploy > New deployment > select type "Web app".
-                   Set "Execute as" to yourself, and "Who has access" to Anyone.
-                   Click Deploy and authorise it when Google asks.
-
-                4. Copy the "Web app URL" Google gives you (it ends in /exec) and
-                   paste it below, replacing REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL,
-                   keeping the quote marks.
-
-              UNTIL YOU DO THIS, THE FORM WILL NOT SEND ANYTHING. Someone who fills
-              it in will be shown a clear error telling them to email instead. That
-              is deliberate, so no enquiry is ever silently lost. Do not remove this
-              form's action or method. Every new enquiry becomes a new row in your
-              sheet automatically, so nothing needs checking by hand.
-              ============================================================================
+              Enquiry form delivery: live.
+              Submissions POST to a Google Apps Script Web App ("Website Enquiry
+              Handler", deployed from the "Shree Kunal Acharya - Website Enquiries"
+              Google Sheet) which appends each one as a new row: Timestamp | Name |
+              Phone | Email | Location | Enquiry Type. Do not remove this form's
+              action or method. If the deployment is ever replaced, update the
+              action URL below with the new one (must end in /exec).
             -->
-            <form class="form" id="contactForm" action="REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL" method="POST">
+            <form class="form" id="contactForm" action="https://script.google.com/macros/s/AKfycbxRgqpJw4UpyJ93tQDuO4ateHWS3GWbgMxTxP1e48BTn_wPPNhC9GrP63pWnBd8WXRI2A/exec" method="POST">
               <!-- Honeypot: hidden from people, ticked by spam bots. Leave it alone. -->
               <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
 

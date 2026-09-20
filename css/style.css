@@ -191,6 +191,7 @@ p { margin: 0 0 var(--space-2); }
   color: var(--tx-light);
   border-block: 1px solid var(--line-light);
   overflow: hidden;
+  isolation: isolate;
 }
 .section--light h1, .section--light h2, .section--light h3, .section--light h4 { color: var(--tx-light); }
 .section--light .lede, .section--light p { color: var(--tx-light-muted); }
@@ -217,7 +218,7 @@ p { margin: 0 0 var(--space-2); }
 <path d='M108 132 c-2 12 6 22 18 24 2 -12 -6 -22 -18 -24z'/>\
 </svg>");
   background-size: contain; background-repeat: no-repeat;
-  opacity: .6; pointer-events: none;
+  opacity: .6; pointer-events: none; z-index: -1;
 }
 .section--light::before { top: 0; left: 0; }
 .section--light > .wrap::after {
@@ -584,7 +585,7 @@ p { margin: 0 0 var(--space-2); }
 .contact-meta__item p { color: var(--tx-dark); margin: 0; }
 
 /* Trust band -------------------------------------------------------------------*/
-.trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); padding-block: var(--space-4); }
+.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); padding-block: var(--space-4); }
 .trust__item { display: flex; align-items: center; gap: 0.9rem; }
 .trust__icon { width: 44px; height: 44px; flex-shrink: 0; color: var(--gold); }
 .trust__text { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tx-dark-muted); line-height: 1.65; }
@@ -636,7 +637,6 @@ body.nav-open { overflow: hidden; }
   .services { grid-template-columns: repeat(3, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
   .stat:nth-child(2) { border-right: 0; }
-  .trust { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
   .topbar__inner { grid-template-columns: 1fr; text-align: center; }
@@ -876,7 +876,6 @@ body.nav-open { overflow: hidden; }
 }
 
 .limits--three { grid-template-columns: repeat(3, 1fr); }
-.trust--six { grid-template-columns: repeat(3, 1fr); }
 
 .consent-actions {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
@@ -888,10 +887,39 @@ body.nav-open { overflow: hidden; }
   text-transform: uppercase; color: var(--tx-light-muted);
 }
 
+/* Five trust items on a six-column grid so the second row centres under the first */
+.trust--six { grid-template-columns: repeat(6, 1fr); max-width: 940px; margin-inline: auto; column-gap: var(--space-4); }
+.trust--six > .trust__item { grid-column: span 2; }
+.trust--six > .trust__item:nth-child(4) { grid-column: 2 / span 2; }
+.trust--six > .trust__item:nth-child(5) { grid-column: 4 / span 2; }
+
 @media (max-width: 1080px) {
-  .limits--three, .trust--six { grid-template-columns: repeat(2, 1fr); }
+  .limits--three { grid-template-columns: repeat(2, 1fr); }
+  .trust--six { grid-template-columns: repeat(2, 1fr); }
+  .trust--six > .trust__item,
+  .trust--six > .trust__item:nth-child(4) { grid-column: auto; }
+  .trust--six > .trust__item:nth-child(5) { grid-column: 1 / -1; justify-self: center; }
 }
 @media (max-width: 720px) {
-  .limits--three, .trust--six { grid-template-columns: 1fr; }
+  .limits--three { grid-template-columns: 1fr; }
+  .trust--six { grid-template-columns: 1fr; }
+  .trust--six > .trust__item:nth-child(5) { grid-column: auto; justify-self: start; }
 }
-.trust--six { max-width: 940px; margin-inline: auto; column-gap: var(--space-4); }
+
+/* Scroll reveal ---------------------------------------------------------------
+   Opt-in per element with [data-reveal]. Hidden states only apply when the page
+   has added .reveal-ready (inline script in <head>) and the visitor has not asked
+   for reduced motion, so content can never be stranded invisible. Individual
+   transform properties (translate/scale) are used so they never fight the
+   transform/transition rules of buttons and other components. */
+@keyframes revealUp     { from { opacity: 0; translate: 0 28px; } to { opacity: 1; translate: 0 0; } }
+@keyframes revealWipe   { from { clip-path: inset(0 100% 0 0); }  to { clip-path: inset(0 0 0 0); } }
+@keyframes revealSettle { from { scale: 1.14; }                    to { scale: 1; } }
+@keyframes revealPop    { 0% { opacity: 0; scale: .4; } 65% { opacity: 1; scale: 1.14; } 100% { opacity: 1; scale: 1; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-ready [data-reveal] { opacity: 0; }
+  .reveal-ready [data-reveal].is-revealed { animation: revealUp .9s var(--ease) var(--d, 0ms) both; }
+  .reveal-ready [data-reveal]:nth-child(2) { --d: 120ms; }
+  .reveal-ready [data-reveal]:nth-child(3) { --d: 240ms; }
+}

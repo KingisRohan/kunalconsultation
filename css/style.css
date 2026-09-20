@@ -585,7 +585,10 @@ p { margin: 0 0 var(--space-2); }
 .contact-meta__item p { color: var(--tx-dark); margin: 0; }
 
 /* Trust band -------------------------------------------------------------------*/
-.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); padding-block: var(--space-4); }
+.trust {
+  display: grid; grid-template-columns: repeat(2, max-content); justify-content: center;
+  column-gap: clamp(2.5rem, 10vw, 8rem); row-gap: var(--space-3); padding-block: var(--space-4);
+}
 .trust__item { display: flex; align-items: center; gap: 0.9rem; }
 .trust__icon { width: 44px; height: 44px; flex-shrink: 0; color: var(--gold); }
 .trust__text { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tx-dark-muted); line-height: 1.65; }
@@ -887,23 +890,16 @@ body.nav-open { overflow: hidden; }
   text-transform: uppercase; color: var(--tx-light-muted);
 }
 
-/* Five trust items on a six-column grid so the second row centres under the first */
-.trust--six { grid-template-columns: repeat(6, 1fr); max-width: 940px; margin-inline: auto; column-gap: var(--space-4); }
-.trust--six > .trust__item { grid-column: span 2; }
-.trust--six > .trust__item:nth-child(4) { grid-column: 2 / span 2; }
-.trust--six > .trust__item:nth-child(5) { grid-column: 4 / span 2; }
+/* Four-up trust row (Testimonials) */
+.trust--four { grid-template-columns: repeat(4, 1fr); max-width: 940px; margin-inline: auto; column-gap: var(--space-4); }
 
 @media (max-width: 1080px) {
   .limits--three { grid-template-columns: repeat(2, 1fr); }
-  .trust--six { grid-template-columns: repeat(2, 1fr); }
-  .trust--six > .trust__item,
-  .trust--six > .trust__item:nth-child(4) { grid-column: auto; }
-  .trust--six > .trust__item:nth-child(5) { grid-column: 1 / -1; justify-self: center; }
+  .trust--four { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 720px) {
   .limits--three { grid-template-columns: 1fr; }
-  .trust--six { grid-template-columns: 1fr; }
-  .trust--six > .trust__item:nth-child(5) { grid-column: auto; justify-self: start; }
+  .trust--four { grid-template-columns: 1fr; }
 }
 
 /* Scroll reveal ---------------------------------------------------------------

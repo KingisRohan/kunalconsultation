@@ -642,6 +642,8 @@ body.nav-open { overflow: hidden; }
   .stat:nth-child(2) { border-right: 0; }
 }
 @media (max-width: 900px) {
+  .nav { display: none; }
+  .nav-toggle { display: inline-flex; }
   .topbar__inner { grid-template-columns: 1fr; text-align: center; }
   .topbar__meta { display: none; }
   .limits-grid { grid-template-columns: 1fr; }
@@ -651,8 +653,6 @@ body.nav-open { overflow: hidden; }
   .scripture__scrim { background: linear-gradient(180deg, rgba(8,5,2,.94), rgba(8,5,2,.7)); }
 }
 @media (max-width: 720px) {
-  .nav { display: none; }
-  .nav-toggle { display: inline-flex; }
   .services { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: 0; border-bottom: 1px solid var(--line-gold); padding-block: var(--space-2); }
@@ -799,11 +799,11 @@ body.nav-open { overflow: hidden; }
 }
 .form__phone select {
   flex: 0 0 clamp(6.25rem, 26vw, 10rem);
-  width: auto; min-width: 0;
+  width: clamp(6.25rem, 26vw, 10rem); min-width: 0;
   border-right: 1px solid var(--line-gold);
   padding-right: 1.8rem; background-position: right 0.6rem center;
 }
-.form__phone input { flex: 1 1 auto; min-width: 0; }
+.form__phone input { flex: 1 1 0; width: 0; min-width: 0; }
 .form__phone select:focus, .form__phone input:focus { background-color: rgba(201,146,47,.08); }
 @media (max-width: 360px) { .form__phone select { flex-basis: 5.75rem; padding-right: 1.5rem; } }
 .form__field input::placeholder, .form__field textarea::placeholder { color: rgba(194,172,132,.65); }
@@ -918,4 +918,35 @@ body.nav-open { overflow: hidden; }
   .reveal-ready [data-reveal].is-revealed { animation: revealUp .9s var(--ease) var(--d, 0ms) both; }
   .reveal-ready [data-reveal]:nth-child(2) { --d: 120ms; }
   .reveal-ready [data-reveal]:nth-child(3) { --d: 240ms; }
+}
+
+/* Small-screen hardening ---------------------------------------------------------
+   iOS Safari sizes grid and flex tracks from their content's minimum width more
+   eagerly than other engines, so anything that cannot wrap (an email address, a
+   no-wrap button) stretched a whole column past the screen edge and let the page
+   pan sideways. Single-column layouts now let their column shrink below its
+   content, and the long strings and buttons are allowed to wrap. */
+@media (max-width: 1080px) { .about-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px) {
+  .contact, .contact-split, .limits-grid, .page-head__inner, .topbar__inner { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .limits, .stats { grid-template-columns: minmax(0, 1fr); }
+  /* 16px: below this iOS zooms the page into a field when it is tapped */
+  .form__field input, .form__field select, .form__field textarea { font-size: 1rem; }
+}
+.form, .form__field, .contact-meta { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.contact__panel, .contact__row > div, .contact-meta__item { min-width: 0; }
+.contact__row a, .contact__row span, .contact-meta__item a { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  .btn { white-space: normal; text-align: center; max-width: 100%; letter-spacing: 0.12em; padding-inline: 1.3rem; }
+  .contact__panel, .contact-meta__item { padding-inline: 1rem; }
+}
+@media (max-width: 400px) {
+  .contact__row a, .contact__row span { font-size: 1.12rem; }
+}
+/* Safety net: clip (unlike hidden) keeps overflow out of the scrollable area, so
+   the page cannot be dragged sideways even if some future element is too wide. */
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
 }

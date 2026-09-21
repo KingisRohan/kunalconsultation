@@ -33,9 +33,9 @@
 
   <style>
     /* Service detail rows: page-scoped extension of the Rev D system ---------- */
-    .svc-list { display: grid; gap: var(--space-5); }
+    .svc-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
     .svc {
-      display: grid; grid-template-columns: 1fr 1.35fr;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
       gap: clamp(1.5rem, 3.5vw, 3.25rem); align-items: start;
     }
     .svc + .svc { padding-top: var(--space-5); border-top: 1px solid var(--line-light); }
@@ -53,7 +53,7 @@
       box-shadow: var(--glow-sm);
     }
     .svc__badge svg { width: 28px; height: 28px; color: var(--brass); }
-    .svc__content { align-self: center; }
+    .svc__content { align-self: center; min-width: 0; }
     .svc__num {
       display: block; font-family: var(--font-ui); font-size: 0.64rem;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
@@ -66,7 +66,7 @@
     .cta-band__ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
     .page-head .lede { color: var(--tx-dark-muted); margin-top: var(--space-3); }
 
-    @media (max-width: 980px) { .svc { grid-template-columns: 1fr; } }
+    @media (max-width: 980px) { .svc { grid-template-columns: minmax(0, 1fr); } }
 
     /* Scroll choreography: backgrounds untouched, content arrives as you scroll ---- */
     @media (prefers-reduced-motion: no-preference) {

@@ -30,6 +30,17 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <style>
+    /* This page only: simplify the corner filigree to a single accent dot;
+       the top-of-section lotus (.wrap::after) is untouched. */
+    .section--light::before, .section--light::after {
+      background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' fill='none' stroke='%23C9922F' stroke-width='1.2' stroke-linecap='round'>\
+<circle cx='30' cy='30' r='4'/>\
+</svg>");
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,26 +73,10 @@
       },
       {
         "@type": "Question",
-        "name": "How long does a consultation take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Typically 90 minutes to three hours on site, depending on property size and scope. Remote consultations run about 60 minutes over a call."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Do you offer remote consultations?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, for clients anywhere in India. You share the floor plan, we speak by video or phone, and you receive a written report by email."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is vastu religious?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vastu is a classical architectural science, not a religious practice. It is followed by people of all backgrounds and is applied in commercial and residential contexts alike."
         }
       },
       {
@@ -98,14 +93,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Have the floor plan ready if available, note any specific concerns, and ensure access to all rooms. That is all. We will take it from there."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if I am not sure I need a consultation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A short call is the best way to find out. We can discuss your property and goals, and Guruji will let you know whether a consultation is the right next step."
         }
       }
     ]
@@ -235,31 +222,11 @@
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false" type="button">
-              <span>How long does a consultation take?</span>
-              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="faq__answer" hidden>
-              <div><p>Typically 90 minutes to three hours on site, depending on property size and scope. Remote consultations run about 60 minutes over a call.</p></div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" type="button">
               <span>Do you offer remote consultations?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq__answer" hidden>
               <div><p>Yes, for clients anywhere in India. You share the floor plan, we speak by video or phone, and you receive a written report by email.</p></div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" type="button">
-              <span>Is vastu religious?</span>
-              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="faq__answer" hidden>
-              <div><p>Vastu is a classical architectural science, not a religious practice. It is followed by people of all backgrounds and is applied in commercial and residential contexts alike.</p></div>
             </div>
           </div>
 
@@ -280,16 +247,6 @@
             </button>
             <div class="faq__answer" hidden>
               <div><p>Have the floor plan ready if available, note any specific concerns, and ensure access to all rooms. That is all. We will take it from there.</p></div>
-            </div>
-          </div>
-
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false" type="button">
-              <span>What if I am not sure I need a consultation?</span>
-              <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="faq__answer" hidden>
-              <div><p>A short call is the best way to find out. We can discuss your property and goals, and Guruji will let you know whether a consultation is the right next step.</p></div>
             </div>
           </div>
 

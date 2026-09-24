@@ -29,6 +29,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Marcellus&family=Karla:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* This page only: simplify the corner filigree to a single accent dot;
+       the top-of-section lotus (.wrap::after) is untouched. */
+    .section--light::before, .section--light::after {
+      background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' fill='none' stroke='%23C9922F' stroke-width='1.2' stroke-linecap='round'>\
+<circle cx='30' cy='30' r='4'/>\
+</svg>");
+    }
+  </style>
 </head>
 <body>
 
@@ -208,11 +219,11 @@
         <div class="trust">
           <div class="trust__item">
             <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M24 5l15 6v11c0 10-6.5 17.5-15 21-8.5-3.5-15-11-15-21V11z"/><path d="M17 24l5 5 10-10"/></svg>
-            <span class="trust__text"><b>Written report</b>every engagement</span>
+            <span class="trust__text"><b>International</b>consultations worldwide</span>
           </div>
           <div class="trust__item">
             <svg class="trust__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5.5 6.5 5.5 27.5 0 34M24 7c-5.5 6.5-5.5 27.5 0 34"/></svg>
-            <span class="trust__text"><b>Mumbai &amp; remote</b>on site and online</span>
+            <span class="trust__text"><b>PAN India</b>on site and online</span>
           </div>
         </div>
       </div>

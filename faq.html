@@ -31,14 +31,22 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* This page only: simplify the corner filigree to a single accent dot;
-       the top-of-section lotus (.wrap::after) is untouched. */
-    .section--light::before, .section--light::after {
+    /* This page only: one accent dot near the top (page-head), not repeated
+       low on the page. The top-of-section lotus (.wrap::after) is untouched. */
+    .section--light::before, .section--light::after { content: none; }
+    .page-head { position: relative; overflow: hidden; isolation: isolate; }
+    .page-head::before, .page-head::after {
+      content: "";
+      position: absolute; top: 0; width: 330px; height: 330px;
       background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' fill='none' stroke='%23C9922F' stroke-width='1.2' stroke-linecap='round'>\
 <circle cx='30' cy='30' r='4'/>\
 </svg>");
+      background-size: contain; background-repeat: no-repeat;
+      opacity: .6; pointer-events: none; z-index: -1;
     }
+    .page-head::before { left: 0; }
+    .page-head::after { right: 0; transform: scaleX(-1); }
   </style>
 
   <script type="application/ld+json">
